@@ -1,0 +1,292 @@
+﻿<krpano version="1.19" title="Virtual Tour">
+
+	<include url="skin/vtourskin.xml" />
+	<include url="video-player.xml" />
+
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<skin_settings maps="false"
+	               maps_type="google"
+	               maps_bing_api_key=""
+	               maps_google_api_key=""
+	               maps_zoombuttons="false"
+	               gyro="true"
+	               webvr="true"
+	               webvr_gyro_keeplookingdirection="false"
+	               webvr_prev_next_hotspots="true"
+	               littleplanetintro="false"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="false"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               deeplinking="false"
+	               loadscene_flags="MERGE"
+	               loadscene_blend="ZOOMBLEND(2.0, 2.0, easeInOutSine)"
+	               loadscene_blend_prev="ZOOMBLEND(2.0, 2.0, easeInOutSine)"
+	               loadscene_blend_next="ZOOMBLEND(2.0, 2.0, easeInOutSine)"
+	               loadingtext="loading..."
+	               layout_width="100%"
+	               layout_maxwidth="814"
+	               controlbar_width="-24"
+	               controlbar_height="40"
+	               controlbar_offset="20"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin.png"
+	               design_bgcolor="0x2D3E50"
+	               design_bgalpha="0.8"
+	               design_bgborder="0"
+	               design_bgroundedge="1"
+	               design_bgshadow="0 4 10 0x000000 0.3"
+	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+	               design_thumbborder_padding="2"
+	               design_thumbborder_bgroundedge="0"
+	               design_text_css="color:#FFFFFF; font-family:Arial;"
+	               design_text_shadow="1"
+	               />
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+	</action>
+
+
+	
+	<scene name="scene_IMG_0835" title="电梯口" onstart="" thumburl="panos/IMG_0835.tiles/thumb.jpg" lat="" lng="" heading="" devices="flash">
+
+		<view hlookat="90" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_0835.tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="270.00" vfov="58.178256" voffset="0.00" multires="true" tilesize="4000" progressive="true">
+			<level tiledimagewidth="8000" tiledimageheight="1888">
+				<cylinder url="panos/IMG_0835.tiles/pano_%v%h.jpg" />
+			</level>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="88.525" atv="18.316" linkedscene="scene_img_0836" />
+
+	</scene>
+
+	<scene name="scene_IMG_0836" title="办公室门口" onstart="" thumburl="panos/IMG_0836.tiles/thumb.jpg" lat="" lng="" heading="" devices="flash">
+
+		<view hlookat="70" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_0836.tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="270.00" vfov="54.334688" voffset="0.00" multires="true" tilesize="4000" progressive="true">
+			<level tiledimagewidth="8000" tiledimageheight="1742">
+				<cylinder url="panos/IMG_0836.tiles/pano_%v%h.jpg" />
+			</level>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="34.629" atv="12.775" linkedscene="scene_img_0837" />
+
+	</scene>
+
+	<scene name="scene_IMG_0837" title="前台" onstart="" thumburl="panos/IMG_0837.tiles/thumb.jpg" lat="" lng="" heading="" devices="flash">
+
+		<view hlookat="-15" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_0837.tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="270.00" vfov="53.812559" voffset="0.00" multires="true" tilesize="4000" progressive="true">
+			<level tiledimagewidth="8000" tiledimageheight="1723">
+				<cylinder url="panos/IMG_0837.tiles/pano_%v%h.jpg" />
+			</level>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="13.234" atv="12.111" linkedscene="scene_img_0838" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-46.258" atv="12.265" linkedscene="scene_img_0838" />
+		<hotspot name="spot3"  
+                 style="new_spotd7_gif"
+                 ath="-20.710" atv="20"
+                 scale="0.3"
+                 onclick="if(hotspot[introduce].visible,
+                 tween(hotspot[introduce].alpha,0);
+                 delayedcall(0.5,set(hotspot[introduce].visible,false))
+                 ,
+                 set(hotspot[introduce].visible,true);tween(hotspot[introduce].alpha,1) )"
+
+        />
+				<!-- 热点，点击跳出花草介绍图片 --> 				  		 
+        <hotspot name="introduce" 
+                 alpha="0"
+                 ath="-20.710" atv="10"				 
+                 url="photo/pl_introduct.png" 
+                 visible="false" 
+                 onclick="if(hotspot[buy].visible,
+                 tween(hotspot[buy].alpha,0);
+                 delayedcall(0.5,set(hotspot[buy].visible,false))
+                 ,
+                 set(hotspot[buy].visible,true);tween(hotspot[buy].alpha,1) )"			 
+        />
+		<!-- 购买的链接 --> 	
+		<hotspot name="buy" 
+                 ath="-20.710" atv="20"				 
+                 url="photo/charge.png" 
+                 visible="false" 
+                 onclick="openurl('https://item.jd.com/10926751900.html',_blank);"
+        />
+
+	</scene>
+
+	<scene name="scene_IMG_0838" title="入口" onstart="" thumburl="panos/IMG_0838.tiles/thumb.jpg" lat="" lng="" heading="" devices="flash">
+
+		<view hlookat="-30" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_0838.tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="270.00" vfov="53.853294" voffset="0.00" multires="true" tilesize="4000" progressive="true">
+			<level tiledimagewidth="8000" tiledimageheight="1724">
+				<cylinder url="panos/IMG_0838.tiles/pano_%v%h.jpg" />
+			</level>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-39.376" atv="15.571" linkedscene="scene_img_0839" />
+		<hotspot name="heart" 
+                 ath="-63.710" atv="2"	
+                 visible="true"				 
+                 url="photo/heart1.png" 
+				 scale="0.8"
+                 onclick="if(hotspot[love].visible,
+                 tween(hotspot[love].alpha,0);
+                 delayedcall(0.5,set(hotspot[love].visible,false))
+                 ,
+                 set(hotspot[love].visible,true);tween(hotspot[love].alpha,1) )"		 
+        />
+		<hotspot name="love" 
+                 alpha="0"
+                 ath="-62.710" atv="0"				 
+                 url="photo/love.png" 
+                 visible="false"
+				 scale="1"
+                 onclick="
+                 tween(alpha,0);
+                 delayedcall(0.5,set(visible,false))"
+        />
+
+	</scene>
+
+	<scene name="scene_IMG_0839" title="办公区-1" onstart="" thumburl="panos/IMG_0839.tiles/thumb.jpg" lat="" lng="" heading="" devices="flash">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_0839.tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="270.00" vfov="53.880483" voffset="0.00" multires="true" tilesize="4000" progressive="true">
+			<level tiledimagewidth="8000" tiledimageheight="1725">
+				<cylinder url="panos/IMG_0839.tiles/pano_%v%h.jpg" />
+			</level>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-17.069" atv="11.932" linkedscene="scene_img_0840" />
+		<hotspot name="videospot"
+		         alpha="1"
+	             url="photo/ad.png"
+				 visible ="true"
+	             scale="0.02"
+	             ath="25" atv="12"
+	             onclick="looktohotspot(get(name),90); videoplayer_open('ad.mp4');"
+	    />
+
+	</scene>
+
+	<scene name="scene_IMG_0840" title="办公区-2" onstart="" thumburl="panos/IMG_0840.tiles/thumb.jpg" lat="" lng="" heading="" devices="flash">
+
+		<view hlookat="30" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/IMG_0840.tiles/preview.jpg" />
+
+		<image type="CYLINDER" hfov="270.00" vfov="53.812559" voffset="0.00" multires="true" tilesize="4000" progressive="true">
+			<level tiledimagewidth="8000" tiledimageheight="1723">
+				<cylinder url="panos/IMG_0840.tiles/pano_%v%h.jpg" />
+			</level>
+		</image>
+		<hotspot name="list"  
+                 style="new_spotd8_gif"
+                 ath="-18.710" atv="10"
+                 scale="0.3"
+				 visible="true" 
+                 onclick="if(hotspot[love_list].visible,
+                 tween(hotspot[love_list].alpha,0);
+                 delayedcall(0.5,set(hotspot[love_list].visible,false))
+                 ,
+                 set(hotspot[love_list].visible,true);tween(hotspot[love_list].alpha,1) )" 
+        />
+		<hotspot name="love_list" 
+                 ath="-20.10" atv="0"	
+                 alpha="0"				 
+                 url="photo/like.png" 
+                 visible="false" 
+                 onclick="
+                 tween(alpha,0);
+                 delayedcall(0.5,set(visible,false))"
+        />
+		<hotspot name="buy_link"  
+                 style="new_spotd8_gif"
+                 ath="75" atv="22"
+                 scale="0.4"
+			     visible="true" 
+                 onclick="openurl('https://item.jd.com/11067810.html',_blank);" 
+        />
+
+		<!-- place your scene hotspots here -->
+
+	</scene>
+	
+	    <!-- 定义热点风格 - 旋转热点的style 因为需要用到crop来进行动画，所以列出了png图片宽度、高度、第一帧开始位置也就是0，以及最后一帧就是24，onloaded也就是载入后执行一个动画的action--> 
+    <style name="new_spotd7_gif" 
+           url="photo/new_spotd7_gif.png" 
+           crop="0|0|128|128" 
+           framewidth="128" frameheight="128" frame="0" lastframe="24" 
+           onloaded="hotspot_animate();" 
+    /> 
+	<!-- 定义热点风格 - 手指点击热点 --> 
+    <style name="new_spotd8_gif" 
+           url="photo/new_spotd8_gif.png" 
+           crop="0|0|128|128" 
+           framewidth="128" frameheight="128" frame="0" lastframe="24" 
+           onloaded="hotspot_animate();" 
+    /> 
+	<!-- 热点动画action，每隔0.03秒改变crop的内容，从而实现动画效果，inc是一个每次递增指定数值的方法，这里是让frame这个变量每次增加1，当到达19时，则从0又开始递增。mul是乘法运算，将高度乘以当前帧序号，得到crop中y的位置。txtadd对crop的内容进行了设定。因为每一次ypos的值都会发生变化，所以crop中所显示的内容也发生变化。最后是0.03秒后再次执行自身。 --> 
+
+    <action name="hotspot_animate"> 
+        inc(frame,1,get(lastframe),0); 
+        mul(ypos,frame,frameheight); 
+        txtadd(crop,'0|',get(ypos),'|',get(framewidth),'|',get(frameheight)); 
+        delayedcall(0.03, if(loaded, hotspot_animate() ) ); 
+    </action>
+
+
+</krpano>
